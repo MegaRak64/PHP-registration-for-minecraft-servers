@@ -16,7 +16,7 @@ if (isset($_POST['password'])) { $password=$_POST['password']; if ($password =='
 
 if (empty($username) or empty($password))
 {
-exit ("Вы ввели не всю информацию, венитесь назад и заполните все поля!");
+exit ("Login or password is empty");
 }
 
 $username = stripslashes($username);
@@ -31,7 +31,7 @@ $password = trim($password);
 $lenghtpass= strlen($password);
 if ($lenghtpass < 6)
 {
-exit ("У ТЕБЯ СЛИШКОМ КОРОТКИЙ");
+exit ("Password short! minimal lenght 5 simbols!");
 }
 
 $hash= hash('SHA512', $password);
@@ -43,7 +43,7 @@ include ("bd.php");
 $result = mysql_query("SELECT id FROM users WHERE username='$username'",$db);
 $myrow = mysql_fetch_array($result);
 if (!empty($myrow['id'])) {
-exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой! <a href='/#Register'>Регистрация</a> ");
+exit ("This login already taken");
 }
 
 
@@ -58,10 +58,10 @@ $result2 = mysql_query ("INSERT INTO users (username,realname,password,ip) VALUE
 
 if ($result2=='TRUE')
 {
-echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='/'>Войти</a>";
+echo "Registration successful ";
 }
 
 else {
-echo "Ошибка! Вы не зарегистрированы.";
+echo "Error your not registred";
      }
 ?>

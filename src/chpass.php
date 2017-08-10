@@ -13,11 +13,11 @@ if (isset($_POST['newpassword'])) { $newpassword=$_POST['newpassword']; if ($new
 
 if (empty($username))
 {
-exit ("Вы не авторизованы!");
+exit ("You not autorited");
 }
 if (empty($newpassword) or empty($password))
 {
-exit ("Вы ввели не всю информацию, венитесь <a href='/'>назад</a> и заполните все поля!");
+exit ("Login or password empty");
 }
 
 $username = stripslashes($username);
@@ -35,7 +35,7 @@ $newpassword = trim($newpassword);
 $lenghtpass= strlen($newpassword);
 if ($lenghtpass < 5)
 {
-exit ("Пароль не должен быть короче 5 символов!");
+exit ("Password short! minimal lenght 5 simbols!");
 }
 $hash= hash('SHA512', $newpassword);
 $newpassword= $hash;
@@ -49,21 +49,21 @@ $iddd= $myrow['id'];
 if (empty($myrow['password']))
 {
 
-exit ("Извините, введённый вами логин или пароль неверный! <a href='/'>Главная страница</a>");
+exit ("Login uncorrect");
 }
 else {
 
           if ($myrow['password']==hash('SHA512', $password)) {
 
 	$resulttt= mysql_query ("UPDATE `users` SET `password` = '$newpassword' WHERE `users`.`id` = $iddd");
-	echo "Пароль успешно изменен, <a href='/'>Перезайдите</a>!";
+	echo "Password successful changed, <a href='/'>re-login</a>!";
 	unset($_SESSION['username']);
 	unset($_SESSION['id']);
           }
 
        else {
 
-       exit ("Извините, введённый вами пароль неверный! <a href='/'>Главная страница</a>");
+       exit ("Password uncorrect");
 	   }
 }
 ?>

@@ -9,7 +9,6 @@
 
 <meta charset="UTF-8">
 
-<title>Bombix</title>
 
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -44,7 +43,7 @@ if (empty($username) or empty($password))
 
 {
 
-exit ("Вы ввели не всю информацию, венитесь назад и заполните все поля!");
+exit ("Uncorrect login or password");
 
 }
 
@@ -86,7 +85,7 @@ if (empty($myrow['password']))
 
 
 
-exit ("Извините, введённый вами логин или пароль неверный!");
+exit ("Uncorrect login or password");
 
 }
 
@@ -98,7 +97,7 @@ else {
 
           $_SESSION['id']=$myrow['id'];
 
-          echo "Вы успешно вошли на сайт! <a href='/#LK'>Личный кабинет</a>";
+          echo "Well done <a href='/#LK'>Your profile</a>";
 
           }
 
@@ -109,7 +108,7 @@ else {
 
 	echo $hash ;
 
-       exit ("Извините, введённый вами логин или пароль неверный!");
+       exit ("Uncorrect login or password");
 
 	   }
 
