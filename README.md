@@ -1,5 +1,5 @@
 # PHP registration for minecraft servers
-whith SHA512 encrypting
+with SHA512 encrypting
 
 
 <br><br><br>
