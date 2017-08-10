@@ -1,0 +1,11 @@
+.help { cursor: pointer; }
+#menu { top: 50%; left: 50%; width: 450px; height: 450px; position: absolute; margin-top: -225px; margin-left: -225px; }
+body { min-height: 100%; background-size: cover; background: #000000 url('/sword.png') ; background-repeat: no-repeat; background-position: right bottom; }
+#a { text-decoration: none; color: white;  }
+#a:hover { transition: 1s; color: purple; }
+#header{ width: 100%; height: 23px; background-color: #25B33f; margin-bottom: 10px; }
+
+input[type="submit"] { display: inline-block; font-size: 15px; color: rgb(205,216,228); text-decoration: none; padding: .2em .8em; outline: none; border-right: 1px solid rgba(13,20,27,.5); border-top: 1px solid rgba(270,278,287,.01); background-color: rgb(64,73,82); background-image: radial-gradient(1px 60% at 0% 50%, rgba(255,255,255,.3), transparent), radial-gradient(1px 60% at 100% 50%, rgba(255,255,255,.3), transparent), linear-gradient(rgb(64,73,82), rgb(72,81,90)); }
+input[type="submit"]:hover { background-image: radial-gradient(1px 60% at 0% 50%, rgba(255,255,255,.3), transparent), radial-gradient(1px 60% at 100% 50%, rgba(255,255,255,.3), transparent), linear-gradient(rgb(51,60,67), rgb(58,65,72)); }
+input[type="submit"]:focus { color: rgb(245,247,250); border-top: 1px solid rgb(67,111,136); background-image: linear-gradient(rgb(46,95,122), rgb(36,68,92)); }
+input[type="text"] { color: #9c9c9c !important; font-style: Comic Sans; }
