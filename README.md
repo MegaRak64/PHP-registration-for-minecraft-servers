@@ -13,4 +13,4 @@ Setting plugin for remote work with mysql<br>
 Run the server with a configured plugin, it creates a table in db <br>
 Enjoy!<br>
 <hr>
-Translated with the help of <a href="https://www.spigotmc.org/resources/authme-reloaded.6269/">Google translator</a>
+Translated with the help of <a href="https://translate.google.com">Google translator</a>
